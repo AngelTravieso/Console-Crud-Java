@@ -14,32 +14,34 @@ public class TestCRUD {
 
             System.out.println("\n Elija una opcion para continuar: \n");
 
-            System.out.println("1. Agregar Usuario");
-            System.out.println("2. Listar Usuarios");
-            System.out.println("3. Actualizar informacion usuario");
-            System.out.println("4. Eliminar usuario");
-            System.out.println("0. Salir");
-            
-            System.out.print("opcion: ");
+            System.out.println("\t 1. Agregar Usuario");
+            System.out.println("\t 2. Listar Usuarios");
+            System.out.println("\t 3. Actualizar informacion usuario");
+            System.out.println("\t 4. Eliminar usuario");
+            System.out.println("\t 0. Salir");
 
-            opcion = Integer.parseInt(sc.nextLine());
+            System.out.print("\n opcion: ");
+
+            opcion = sc.nextInt();
         } while (opcion < 0 || opcion > 4);
 
         switch (opcion) {
+            // cerrar programa
             case 0:
-                mostrarMenu(opcion);
+                System.out.println("Programa finalizado...");
+                sc.close();
                 break;
             case 1:
-                mostrarMenu(opcion);
+                System.out.println("Agregando usuario...");
                 break;
             case 2:
-                mostrarMenu(opcion);
+                System.out.println("Listando usuarios");
                 break;
             case 3:
-                mostrarMenu(opcion);
+                System.out.println("Actualizando info");
                 break;
             case 4:
-                mostrarMenu(opcion);
+                System.out.println("eliminando usuario");
                 break;
         }
 
